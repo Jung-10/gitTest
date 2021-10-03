@@ -16,3 +16,18 @@ while x:
     elif (length[2] < length[1] + length[0]) and (length[0] > 0 and length[1] > 0 and length[2] > 0):
         print(True)
     x = int(input("다시하시겠습니까? 예 = 1 아니오 = 0"))
+
+# 방법 2
+
+a, b, c = map(int, input("세 변의 길이를 입력하세요 : ").split())
+
+length = [a,b,c]
+
+length.sort(reverse = True)
+
+if (length[0] <= 0 or length[1] <= 0 or length[2] <= 0):
+    print("양의 정수를 입력하세요.")
+elif (length[0] >= length[1] + length[2]) and (length[0] > 0 and length[1] > 0 and length[2] > 0):
+    print(False)
+elif (length[0] < length[1] + length[2]) and (length[0] > 0 and length[1] > 0 and length[2] > 0):
+    print(True)
