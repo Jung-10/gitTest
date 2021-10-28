@@ -29,7 +29,7 @@ header .inner h1 {
 	bottom: 15px;
 }
 header .inner h1 a {
-	font: bold 24px/1 "arial";
+	font: bold 35px/1 "arial";
 	color: #444;
 }
 header .inner .util {
@@ -82,14 +82,22 @@ figure video {
 	top: 0px;
 	left: 0px;
 }
+figure img {
+	object-fit: cover; /*pic프레임안에 이미지 꽉 채움*/
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
 figure .inner {
 	width: 1180px;
 	margin: 0px auto;
 	position: relative;
 }
 figure .inner h1 {
-	font: normal 120px/1 "arial";
-	color: #fff;
+	font: bold 50px/1 "arial"; /*원하는 지역 글씨 크기*/
+	color: rgb(0, 0, 0);
 	margin-bottom: 20px;
 }
 figure .inner p {
@@ -169,6 +177,61 @@ section .inner .wrap article .pic img {
 	width: 100%;
 	height: 100%;
 }
+
+
+section .inner2 {
+	width: 1180px;
+	margin: 0px auto;
+}
+section .inner2 h1 {
+	font: bold 24px/1 "arial";
+	color: #555;
+	text-align: center;
+	margin-bottom: 50px;
+}
+section .inner2 .wrap {
+	width: 100%;
+}
+section .inner2 .wrap::after {
+	/*자식 요소인 article의 float해제*/
+	content: "";
+	display: block;
+	clear: both;
+}
+section .inner2 .wrap article {
+	width: 280px;
+	float: none;
+	margin-right: 20px;
+}
+section .inner2 .wrap article:last-child {
+	/*제일 오른쪽 마지막 요소만 여백제거*/
+	margin-right: 0px;
+}
+section .inner2 .wrap article h2 {
+	margin-bottom: 10px;
+}
+section .inner2 .wrap article h2 a {
+	font: bold 16px/1 "arial";
+	color: #555;
+}
+section .inner2 .wrap article p {
+	font: 14px/1.4 "arial";
+	color: #777;
+}
+section .inner2 .wrap article .pic {
+	width: 100%;
+	height: 100%;
+	background: #333;
+	margin-bottom: 15px;
+	position: relative;
+	left : 450px;
+	overflow: hidden;
+}
+section .inner2 .wrap article .pic img {
+	object-fit: cover; /*pic프레임안에 이미지 꽉 채움*/
+	width: 100%;
+	height: 100%;
+}
 /* footer */
 footer {
 	width: 100%;
@@ -222,3 +285,65 @@ footer .inner .lower p {
 	font: 12px/1 "arial";
 	color: #777;
 }
+.container-1{
+	width: 500px;
+	vertical-align: top;
+	white-space: nowrap;
+	position: relative;
+}
+.container-1 input#search{
+	width: 300px;
+	height: 50px;
+	background: #2b303b;
+	border: none;
+	font-size: 10pt;
+	float: left;
+	color: #63717f;
+	padding-left: 45px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.container-1 input#search::-webkit-input-placeholder {
+	color: #65737e;
+ }
+ 
+ .container-1 input#search:-moz-placeholder { /* Firefox 18- */
+	color: #65737e;  
+ }
+ 
+ .container-1 input#search::-moz-placeholder {  /* Firefox 19+ */
+	color: #65737e;  
+ }
+ 
+ .container-1 input#search:-ms-input-placeholder {  
+	color: #65737e;  
+ }
+ .container-1 .icon{
+	position: absolute;
+	top: 50%;
+	margin-left: 17px;
+	margin-top: 17px;
+	z-index: 1;
+	color: #acb8c4;
+  }
+ .container-1 input#search{
+	width: 1200px;
+	height: 50px;
+	background: #ffffff;
+	border: none;
+	font-size: 10pt;
+	float: left;
+	color: #000000;
+	padding-left: 45px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+  
+	
+	-webkit-transition: background .55s ease;
+	-moz-transition: background .55s ease;
+	-ms-transition: background .55s ease;
+	-o-transition: background .55s ease;
+	transition: background .55s ease;
+  }
